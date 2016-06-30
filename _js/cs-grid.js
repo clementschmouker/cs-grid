@@ -3,13 +3,14 @@ var CSGrid = function() {
   this.DOMGridColumns = [];
   this.DOMGridGutters = [];
   this.DOMGridRows = [];
+
+  this.DOMGridButton = document.createElement("button");
   this.bActive = true;
+
 }
 
 
 //Global Variables
-
-var DOMGridButton = document.createElement("button");
 var csGrid = new CSGrid();
 
 function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight, activategrid) {
@@ -18,11 +19,11 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
   csGrid.DOMGridContainer.classList.add("cs-gridContainer");
 
 
-  DOMGridButton.classList.add("cs-gridButton");
-  DOMGridButton.innerHTML = "ON";
+  csGrid.DOMGridButton.classList.add("cs-gridButton");
+  csGrid.DOMGridButton.innerHTML = "ON";
 
   document.getElementsByTagName("body")[0].appendChild(csGrid.DOMGridContainer);
-  document.getElementsByTagName("body")[0].appendChild(DOMGridButton);
+  document.getElementsByTagName("body")[0].appendChild(csGrid.DOMGridButton);
   csGrid.DOMGridContainer.style.width = gridwidth+"px";
   for( var i = 0; i < gridcolumnnumber; i += 1) {
     csGrid.DOMGridGutters[i] = document.createElement("div");
@@ -50,23 +51,23 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
   csGrid.bActive = activategrid;
   if(csGrid.bActive == true) {
     csGrid.DOMGridContainer.style.opacity = 1;
-    DOMGridButton.innerHTML = "ON";
+    csGrid.DOMGridButton.innerHTML = "ON";
   }
   if(csGrid.bActive == false) {
     csGrid.DOMGridContainer.style.opacity = 0;
-    DOMGridButton.innerHTML = "OFF";
+    csGrid.DOMGridButton.innerHTML = "OFF";
   }
 }
 
-DOMGridButton.addEventListener("click", function() {
+csGrid.DOMGridButton.addEventListener("click", function() {
   if(csGrid.bActive == false) {
     csGrid.bActive = true;
     csGrid.DOMGridContainer.style.opacity = 1;
-    DOMGridButton.innerHTML = "ON";
+    csGrid.DOMGridButton.innerHTML = "ON";
   }
   else {
     csGrid.bActive = false;
     csGrid.DOMGridContainer.style.opacity = 0;
-    DOMGridButton.innerHTML = "OFF";
+    csGrid.DOMGridButton.innerHTML = "OFF";
   }
 });

@@ -31,6 +31,7 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
       DOMGridContainer.appendChild(DOMGridGutters[i]);
     }
   }
+  //Checks if there needs to be rows
   if(gridrowheight){
     for(var i = 0; i < document.body.offsetHeight / gridrowheight - 1; i += 1) {
       DOMGridRows[i] = document.createElement("div");
@@ -40,7 +41,7 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
     }
     console.log(document.body.offsetHeight);
   }
-
+  //Checks if there needs to start active/inactive
   bActive = activategrid;
   if(bActive == true) {
     DOMGridContainer.style.display = "block";

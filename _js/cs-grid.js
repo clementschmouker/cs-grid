@@ -14,7 +14,7 @@ var DOMGridButton = document.createElement("button");
 DOMGridButton.classList.add("cs-gridButton");
 
 var bActive = true;
-DOMGridButton.innerHTML = "ON";
+DOMGridButton.innerHTML = "Grid ON";
 
 function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth) {
   DOMBody.appendChild(DOMGridContainer);
@@ -39,11 +39,11 @@ DOMGridButton.addEventListener("click", function() {
   if(bActive == false) {
     bActive = true;
     DOMGridContainer.style.display = "block";
-    DOMGridButton.innerHTML = "ON";
+    DOMGridButton.innerHTML = "Grid ON";
   }
   else {
     bActive = false;
     DOMGridContainer.style.display = "none";
-    DOMGridButton.innerHTML = "OFF";
+    DOMGridButton.innerHTML = "Grid OFF";
   }
 });

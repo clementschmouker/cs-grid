@@ -18,3 +18,14 @@
 .cs-gridGutter {
   outline: 1px solid #ff30ff;
 }
+
+.cs-gridButton {
+  position:fixed;
+  top:0;
+  right:0;
+  background:#aaa;
+  border:none;
+  width:50px;
+  padding:15px 0;
+  padding:3px;
+}

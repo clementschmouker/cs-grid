@@ -2,8 +2,8 @@
 var DOMBody = document.getElementsByTagName("body")[0];
 
 var iGridWidth = 900;
-var iGridColumns = 3;
-var iGridGutterWidth = 30;
+var iGridColumns = 6;
+var iGridGutterWidth = 20;
 
 //Create Grid Container
 var DOMGridContainer = document.createElement("div");
@@ -21,9 +21,9 @@ for( var i = 0; i < iGridColumns; i += 1) {
 
   DOMGridColumns[i] = document.createElement("div");
   DOMGridColumns[i].classList.add("cs-gridColumn")
-  DOMGridColumns[i].style.width = (iGridWidth/iGridColumns)-iGridGutterWidth+"px"; //-2 for the grids border width
+  DOMGridColumns[i].style.width = ((iGridWidth / iGridColumns) - iGridGutterWidth) + iGridGutterWidth/iGridColumns+"px";
   DOMGridContainer.appendChild(DOMGridColumns[i]);
-  if(i != iGridColumns-1){ //in order to not add the last gutter
+  if(i != iGridColumns-1){ //in order to not add a gutter to the end
     DOMGridContainer.appendChild(DOMGridGutters[i]);
   }
 }

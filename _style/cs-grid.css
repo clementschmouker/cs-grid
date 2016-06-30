@@ -1,7 +1,7 @@
 .cs-gridContainer {
   min-height:100vh;
-  border-left:1px solid #00ff30;
-  border-right:1px solid #00ff30;
+  outline:1px solid #00ff30;
+  outline:1px solid #00ff30;
   position:absolute;
   top:0;
   left:50%;
@@ -10,13 +10,13 @@
 }
 .cs-gridColumn,
 .cs-gridGutter {
-  border-left:1px solid #0030ff;
-  border-right:1px solid #0030ff;
+  outline:1px solid #0030ff;
+  outline:1px solid #0030ff;
   min-height:100vh;
   position:relative;
   float:left;
 }
 .cs-gridGutter {
-  border-left: 1px solid #ff30ff;
-  border-right: 1px solid #ff30ff;
+  outline: 1px solid #ff30ff;
+  outline: 1px solid #ff30ff;
 }

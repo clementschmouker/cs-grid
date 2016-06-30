@@ -6,5 +6,17 @@
   top:0;
   left:50%;
   transform:translateX(-50%);
-  pointer-events: none;
+  pointer-events: none; /* Prevent the grid from preventing click on stuff because it's on top of it */
+}
+.cs-gridColumn,
+.cs-gridGutter {
+  border-left:1px solid #0030ff;
+  border-right:1px solid #0030ff;
+  min-height:100vh;
+  position:relative;
+  float:left;
+}
+.cs-gridGutter {
+  border-left: 1px solid #ff30ff;
+  border-right: 1px solid #ff30ff;
 }

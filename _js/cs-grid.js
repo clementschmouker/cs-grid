@@ -5,8 +5,6 @@ var DOMGridContainer = document.createElement("div");
 DOMGridContainer.classList.add("cs-gridContainer");
 
 
-
-
 var DOMGridColumns = [];
 var DOMGridGutters = [];
 

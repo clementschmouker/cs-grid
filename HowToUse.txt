@@ -1,0 +1,27 @@
+ENGLISH */
+
+Hi mate, thanks for using this little code snipet !
+To use it correctly, you just have to link the "cs-grid.js" and "cs-grid.css" files in your html document, as I did in the index given to you in this folder, and use the function setCSGrid() in your main.js
+setCSGrid() uses a few parameters, some of them are optional.
+
+setCSGrid( GridMaxWidth, GridColumnNumber, GridGutterWidth, GridRowHeight, GridDisplay )
+
+GridMaxWidth is the max width of your grid, it will be centered on your screen.
+GridColumnNumber is the number of column you'll get in your grid.
+GridGutterWidth is the width of gutters between each columns. Enter 0 if you don't want any.
+GridRowHeight is optional, and define the height of your rows, if you want any. If you don't want rows, just put 0.
+GridDisplay allows you to decide if the grid is displayed when you load the page or not. If you put nothing, it will display.
+
+
+FRENCH */
+Salut à toi, l'ami. Merci d'utiliser ce petit bout de code fait tout spécialement pour toi.
+Pour l'utiliser, il te suffit de lier les fichiers "cs-grid.js" et "cs-grid.css" dans ton document HTML, comme je l'ai fais dans l'index.html qui se trouve dans ce dossier. Ensuite, tu n'as qu'à utiliser la fonction setCSGrid() dans ton main.js
+setCSGrid() va utiliser des paramètres, dont certains sont optionels.
+
+setCSGrid( GridMaxWidth, GridColumnNumber, GridGutterWidth, GridRowHeight, GridDisplay )
+
+GridMaxWidth va définir la largeur maximale de ta grille, elle sera centrée sur ton écran.
+GridColumnNumber va définir le nombre de colonnes que tu veux dans ta grille.
+GridGutterWidth va définir la largeur de tes goutières entre chaque colonne. Met 0 si tu n'en veux pas.
+GridRowHeight va définir la hauteur de tes rangées. C'est un paramètre optionnel, si tu met 0, il n'y aura pas de rangée.
+GridDisplay va définir si la grille est visible au chargement de ta page ou non. Si tu ne met rien, la grille s'affichera par défaut.

@@ -7,14 +7,15 @@ DOMGridContainer.classList.add("cs-gridContainer");
 
 var DOMGridColumns = [];
 var DOMGridGutters = [];
+var DOMGridRows = [];
 
 var DOMGridButton = document.createElement("button");
 DOMGridButton.classList.add("cs-gridButton");
 
 var bActive = true;
-DOMGridButton.innerHTML = "Grid ON";
+DOMGridButton.innerHTML = "ON";
 
-function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth) {
+function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight) {
   DOMBody.appendChild(DOMGridContainer);
   DOMGridContainer.style.width = gridwidth+"px";
   for( var i = 0; i < gridcolumnnumber; i += 1) {
@@ -30,6 +31,15 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth) {
       DOMGridContainer.appendChild(DOMGridGutters[i]);
     }
   }
+  if(gridrowheight){
+    for(var i = 0; i < document.body.offsetHeight / gridrowheight - 1; i += 1) {
+      DOMGridRows[i] = document.createElement("div");
+      DOMGridRows[i].classList.add("cs-gridRow");
+      DOMGridRows[i].style.height = gridrowheight+"px";
+      DOMGridContainer.appendChild(DOMGridRows[i]);
+    }
+    console.log(document.body.offsetHeight);
+  }
 }
 
 DOMBody.appendChild(DOMGridButton);
@@ -37,11 +47,11 @@ DOMGridButton.addEventListener("click", function() {
   if(bActive == false) {
     bActive = true;
     DOMGridContainer.style.display = "block";
-    DOMGridButton.innerHTML = "Grid ON";
+    DOMGridButton.innerHTML = "ON";
   }
   else {
     bActive = false;
     DOMGridContainer.style.display = "none";
-    DOMGridButton.innerHTML = "Grid OFF";
+    DOMGridButton.innerHTML = "OFF";
   }
 });

@@ -11,12 +11,12 @@ var DOMGridRows = [];
 
 var DOMGridButton = document.createElement("button");
 DOMGridButton.classList.add("cs-gridButton");
-
-var bActive = true;
 DOMGridButton.innerHTML = "ON";
+var bActive = true;
 
 function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight, activategrid) {
   DOMBody.appendChild(DOMGridContainer);
+  DOMBody.appendChild(DOMGridButton);
   DOMGridContainer.style.width = gridwidth+"px";
   for( var i = 0; i < gridcolumnnumber; i += 1) {
     DOMGridGutters[i] = document.createElement("div");
@@ -44,25 +44,24 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
   //Checks if there needs to start active/inactive
   bActive = activategrid;
   if(bActive == true) {
-    DOMGridContainer.style.display = "block";
+    DOMGridContainer.style.opacity = 1;
     DOMGridButton.innerHTML = "ON";
   }
   if(bActive == false) {
-    DOMGridContainer.style.display = "none";
+    DOMGridContainer.style.opacity = 0;
     DOMGridButton.innerHTML = "OFF";
   }
 }
 
-DOMBody.appendChild(DOMGridButton);
 DOMGridButton.addEventListener("click", function() {
   if(bActive == false) {
     bActive = true;
-    DOMGridContainer.style.display = "block";
+    DOMGridContainer.style.opacity = 1;
     DOMGridButton.innerHTML = "ON";
   }
   else {
     bActive = false;
-    DOMGridContainer.style.display = "none";
+    DOMGridContainer.style.opacity = 0;
     DOMGridButton.innerHTML = "OFF";
   }
 });

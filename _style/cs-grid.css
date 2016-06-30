@@ -9,6 +9,8 @@ body {
   left:50%;
   transform:translateX(-50%);
   pointer-events: none; /* Prevent the grid from preventing click on stuff because it's on top of it */
+
+  transition:opacity .2s ease-out;
 }
 .cs-gridColumn,
 .cs-gridGutter {

@@ -26,5 +26,3 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth) {
     }
   }
 }
-
-setCSGrid(900, 12, 20);

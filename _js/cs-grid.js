@@ -1,11 +1,6 @@
 //Global Variables
 var DOMBody = document.getElementsByTagName("body")[0];
 
-var iGridWidth = 900;
-var iGridColumns = 6;
-var iGridGutterWidth = 20;
-
-//Create Grid Container
 var DOMGridContainer = document.createElement("div");
 DOMGridContainer.classList.add("cs-gridContainer");
 DOMBody.appendChild(DOMGridContainer);
@@ -32,4 +27,4 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth) {
   }
 }
 
-setCSGrid(1000, 12, 20);
+setCSGrid(900, 12, 20);

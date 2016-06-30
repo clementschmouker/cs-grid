@@ -39,7 +39,6 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
       DOMGridRows[i].style.height = gridrowheight+"px";
       DOMGridContainer.appendChild(DOMGridRows[i]);
     }
-    console.log(document.body.offsetHeight);
   }
   //Checks if there needs to start active/inactive
   bActive = activategrid;

@@ -15,7 +15,7 @@ DOMGridButton.classList.add("cs-gridButton");
 var bActive = true;
 DOMGridButton.innerHTML = "ON";
 
-function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight) {
+function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight, activategrid) {
   DOMBody.appendChild(DOMGridContainer);
   DOMGridContainer.style.width = gridwidth+"px";
   for( var i = 0; i < gridcolumnnumber; i += 1) {
@@ -39,6 +39,16 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight)
       DOMGridContainer.appendChild(DOMGridRows[i]);
     }
     console.log(document.body.offsetHeight);
+  }
+
+  bActive = activategrid;
+  if(bActive == true) {
+    DOMGridContainer.style.display = "block";
+    DOMGridButton.innerHTML = "ON";
+  }
+  if(bActive == false) {
+    DOMGridContainer.style.display = "none";
+    DOMGridButton.innerHTML = "OFF";
   }
 }
 

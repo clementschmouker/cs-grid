@@ -1,9 +1,10 @@
-.gridContainer {
+.cs-gridContainer {
   min-height:100vh;
-  border-left:1px solid green;
-  border-right:1px solid green;
+  border-left:1px solid #00ff30;
+  border-right:1px solid #00ff30;
   position:absolute;
   top:0;
   left:50%;
   transform:translateX(-50%);
+  pointer-events: none;
 }

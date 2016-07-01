@@ -13,7 +13,15 @@ var CSGrid = function() {
 //Global Variables
 var csGrid = new CSGrid();
 
-function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight, activategrid) {
+var testObject = {
+  gridWidth: 900,
+  gridColumnNumber: 12,
+  gridGutterWidth: 20,
+  gridRowHeight: 20,
+  activateGrid: false
+};
+
+function setCSGrid( object ) {
 
   csGrid.DOMGridContainer = document.createElement("div");
   csGrid.DOMGridContainer.classList.add("cs-gridContainer");
@@ -24,31 +32,31 @@ function setCSGrid( gridwidth, gridcolumnnumber, gridgutterwidth, gridrowheight,
 
   document.getElementsByTagName("body")[0].appendChild(csGrid.DOMGridContainer);
   document.getElementsByTagName("body")[0].appendChild(csGrid.DOMGridButton);
-  csGrid.DOMGridContainer.style.width = gridwidth+"px";
-  for( var i = 0; i < gridcolumnnumber; i += 1) {
+  csGrid.DOMGridContainer.style.width = object.gridWidth+"px";
+  for( var i = 0; i < object.gridColumnNumber; i += 1) {
     csGrid.DOMGridGutters[i] = document.createElement("div");
     csGrid.DOMGridGutters[i].classList.add("cs-gridGutter");
-    csGrid.DOMGridGutters[i].style.width = gridgutterwidth+"px";
+    csGrid.DOMGridGutters[i].style.width = object.gridGutterWidth+"px";
 
     csGrid.DOMGridColumns[i] = document.createElement("div");
     csGrid.DOMGridColumns[i].classList.add("cs-gridColumn")
-    csGrid.DOMGridColumns[i].style.width = ((gridwidth / gridcolumnnumber) - gridgutterwidth) + (gridgutterwidth/gridcolumnnumber)+"px";
+    csGrid.DOMGridColumns[i].style.width = ((object.gridWidth / object.gridColumnNumber) - object.gridGutterWidth) + (object.gridGutterWidth/object.gridColumnNumber)+"px";
     csGrid.DOMGridContainer.appendChild(csGrid.DOMGridColumns[i]);
-    if(i != gridcolumnnumber-1){ //in order to not add a gutter to the end
+    if(i != object.gridColumnNumber-1){ //in order to not add a gutter to the end
       csGrid.DOMGridContainer.appendChild(csGrid.DOMGridGutters[i]);
     }
   }
   //Checks if there needs to be rows
-  if(gridrowheight){
-    for(var i = 0; i < document.body.offsetHeight / gridrowheight - 1; i += 1) {
+  if(object.gridRowHeight){
+    for(var i = 0; i < document.body.offsetHeight / object.gridRowHeight - 1; i += 1) {
       csGrid.DOMGridRows[i] = document.createElement("div");
       csGrid.DOMGridRows[i].classList.add("cs-gridRow");
-      csGrid.DOMGridRows[i].style.height = gridrowheight+"px";
+      csGrid.DOMGridRows[i].style.height = object.gridRowHeight+"px";
       csGrid.DOMGridContainer.appendChild(csGrid.DOMGridRows[i]);
     }
   }
   //Checks if there needs to start active/inactive
-  csGrid.bActive = activategrid;
+  csGrid.bActive = object.activateGrid;
   if(csGrid.bActive == true) {
     csGrid.DOMGridContainer.style.opacity = 1;
     csGrid.DOMGridButton.innerHTML = "ON";

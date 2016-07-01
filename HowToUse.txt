@@ -4,9 +4,12 @@ Hi mate, thanks for using this little code snipet !
 To use it correctly, you just have to link the "cs-grid.js" and "cs-grid.css" files in your html document, as I did in the index given to you in this folder, Then, copy and paste this to your main.js
 
 var myGrid = {
+  gridWidthUnit: "px",
   gridWidth: 900,
+  gridGutterWidthUnit: "px",
   gridColumnNumber: 12,
   gridGutterWidth: 20,
+  gridRowUnit: "px",
   gridRowHeight: 20,
   activateGrid: true
 };
@@ -22,13 +25,15 @@ Salut l'ami. Merci d'utiliser ce petit bout de code.
 Pour l'utiliser, tu dois simplement lier "cs-grid.js" et "cs-grid.js" dans ton document html, comme fait dans l'exemple donné, et copier ceci dans ton main.js
 
 var myGrid = {
+  gridWidthUnit: "px",
   gridWidth: 900,
+  gridGutterWidthUnit: "px",
   gridColumnNumber: 12,
   gridGutterWidth: 20,
+  gridRowUnit: "px",
   gridRowHeight: 20,
   activateGrid: true
 };
-
 setCSGrid(myGrid);
 
 Change les valeures selon tes besoins :)

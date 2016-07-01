@@ -28,7 +28,7 @@ function setCSGrid( object ) {
   for( var i = 0; i < object.gridColumnNumber; i += 1) {
     csGrid.DOMGridGutters[i] = document.createElement("div");
     csGrid.DOMGridGutters[i].classList.add("cs-gridGutter");
-    csGrid.DOMGridGutters[i].style.width = object.gridGutterWidth+object.gridWidthUnit;
+    csGrid.DOMGridGutters[i].style.width = object.gridGutterWidth+object.gridGutterWidthUnit;
 
     csGrid.DOMGridColumns[i] = document.createElement("div");
     csGrid.DOMGridColumns[i].classList.add("cs-gridColumn")

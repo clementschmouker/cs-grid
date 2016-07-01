@@ -1,8 +1,8 @@
 var myGrid = {
-  gridWidthUnit: "%",
-  gridWidth: 100,
+  gridWidthUnit: "px",
+  gridWidth: 900,
   gridColumnNumber: 12,
-  gridGutterWidth: 2,
+  gridGutterWidth: 20,
   gridRowUnit: "px",
   gridRowHeight: 20,
   activateGrid: true

@@ -1,7 +1,9 @@
 var myGrid = {
-  gridWidth: 900, 
+  gridWidthUnit: "%",
+  gridWidth: 100,
   gridColumnNumber: 12,
-  gridGutterWidth: 20,
+  gridGutterWidth: 2,
+  gridRowUnit: "px",
   gridRowHeight: 20,
   activateGrid: true
 };

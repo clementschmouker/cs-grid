@@ -24,15 +24,15 @@ function setCSGrid( object ) {
 
   document.getElementsByTagName("body")[0].appendChild(csGrid.DOMGridContainer);
   document.getElementsByTagName("body")[0].appendChild(csGrid.DOMGridButton);
-  csGrid.DOMGridContainer.style.width = object.gridWidth+"px";
+  csGrid.DOMGridContainer.style.width = object.gridWidth+object.gridWidthUnit;
   for( var i = 0; i < object.gridColumnNumber; i += 1) {
     csGrid.DOMGridGutters[i] = document.createElement("div");
     csGrid.DOMGridGutters[i].classList.add("cs-gridGutter");
-    csGrid.DOMGridGutters[i].style.width = object.gridGutterWidth+"px";
+    csGrid.DOMGridGutters[i].style.width = object.gridGutterWidth+object.gridWidthUnit;
 
     csGrid.DOMGridColumns[i] = document.createElement("div");
     csGrid.DOMGridColumns[i].classList.add("cs-gridColumn")
-    csGrid.DOMGridColumns[i].style.width = ((object.gridWidth / object.gridColumnNumber) - object.gridGutterWidth) + (object.gridGutterWidth/object.gridColumnNumber)+"px";
+    csGrid.DOMGridColumns[i].style.width = ((object.gridWidth / object.gridColumnNumber) - object.gridGutterWidth) + (object.gridGutterWidth/object.gridColumnNumber)+object.gridWidthUnit;
     csGrid.DOMGridContainer.appendChild(csGrid.DOMGridColumns[i]);
     if(i != object.gridColumnNumber-1){ //in order to not add a gutter to the end
       csGrid.DOMGridContainer.appendChild(csGrid.DOMGridGutters[i]);
@@ -43,7 +43,7 @@ function setCSGrid( object ) {
     for(var i = 0; i < document.body.offsetHeight / object.gridRowHeight - 1; i += 1) {
       csGrid.DOMGridRows[i] = document.createElement("div");
       csGrid.DOMGridRows[i].classList.add("cs-gridRow");
-      csGrid.DOMGridRows[i].style.height = object.gridRowHeight+"px";
+      csGrid.DOMGridRows[i].style.height = object.gridRowHeight+object.gridRowUnit;
       csGrid.DOMGridContainer.appendChild(csGrid.DOMGridRows[i]);
     }
   }

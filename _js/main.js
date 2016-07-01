@@ -1,5 +1,5 @@
 var myGrid = {
-  gridWidth: 900,
+  gridWidth: 900, 
   gridColumnNumber: 12,
   gridGutterWidth: 20,
   gridRowHeight: 20,

@@ -13,14 +13,6 @@ var CSGrid = function() {
 //Global Variables
 var csGrid = new CSGrid();
 
-var testObject = {
-  gridWidth: 900,
-  gridColumnNumber: 12,
-  gridGutterWidth: 20,
-  gridRowHeight: 20,
-  activateGrid: false
-};
-
 function setCSGrid( object ) {
 
   csGrid.DOMGridContainer = document.createElement("div");

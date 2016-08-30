@@ -29,10 +29,12 @@ function setCSGrid( object ) {
     csGrid.DOMGridGutters[i] = document.createElement("div");
     csGrid.DOMGridGutters[i].classList.add("cs-gridGutter");
     csGrid.DOMGridGutters[i].style.width = object.gridGutterWidth+object.gridGutterWidthUnit;
+    csGrid.DOMGridGutters[i].style.height = document.body.offsetHeight +"px";
 
     csGrid.DOMGridColumns[i] = document.createElement("div");
     csGrid.DOMGridColumns[i].classList.add("cs-gridColumn")
     csGrid.DOMGridColumns[i].style.width = ((object.gridWidth / object.gridColumnNumber) - object.gridGutterWidth) + (object.gridGutterWidth/object.gridColumnNumber)+object.gridWidthUnit;
+    csGrid.DOMGridColumns[i].style.height = document.body.offsetHeight +"px";
     csGrid.DOMGridContainer.appendChild(csGrid.DOMGridColumns[i]);
     if(i != object.gridColumnNumber-1){ //in order to not add a gutter to the end
       csGrid.DOMGridContainer.appendChild(csGrid.DOMGridGutters[i]);
